@@ -22,6 +22,10 @@ public class greenbar : MonoBehaviour
          currentValue = currentValue - dropSpeed* Time.deltaTime;
          // make sure the bar moves with the space bar being pressed
          slider.value = currentValue%slider.maxValue;
+         if(currentValue <= 0)
+         {
+             currentValue = 0;
+         }
 
     }
 }
