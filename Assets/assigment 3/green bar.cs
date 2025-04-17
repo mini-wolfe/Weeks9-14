@@ -16,7 +16,7 @@ public class greenbar : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
         currentValue += 1;
-        Debug.Log(currentValue);
+      
         }
        //making "green bar" go down when space bar isnt pressed 
          currentValue = currentValue - dropSpeed* Time.deltaTime;
@@ -26,6 +26,10 @@ public class greenbar : MonoBehaviour
          {
              currentValue = 0;
          }
-
+         if (currentValue >= slider.maxValue)
+         {
+             currentValue = slider.maxValue;
+         }
     }
 }
+//https://retrovii.itch.io/fishing-in-the-early-morn used this art work as a background 
